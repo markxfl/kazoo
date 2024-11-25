@@ -726,10 +726,10 @@ finished('cast', ?EVENT(Transferor, <<"CHANNEL_BRIDGE">>, Evt)
             ?WSD_EVT(Target, Transferor, <<"bridged">>),
             lager:debug("transferor and target are bridged"),
             {'stop', 'normal', State};
-        _Transferee ->
-            ?WSD_EVT(Transferor, _Transferee, <<"bridged">>),
-            lager:debug("transferor and transferee bridged"),
-            {'stop', 'normal', State};
+%        _Transferor1 ->
+%            ?WSD_EVT(Transferor, _Transferor1, <<"bridged">>),
+%            lager:debug("transferor and transferee bridged"),
+%            {'stop', 'normal', State};
         _CallId ->
             ?WSD_EVT(_CallId, Transferor, <<"bridged">>),
             lager:debug("transferor bridged to unknown callid ~s", [_CallId]),
@@ -746,10 +746,10 @@ finished('cast', ?EVENT(Transferee, <<"CHANNEL_BRIDGE">>, Evt)
             ?WSD_EVT(Target, Transferee, <<"bridged">>),
             lager:debug("transferee and target are bridged"),
             {'stop', 'normal', State};
-        _Transferor ->
-            ?WSD_EVT(_Transferor, Transferee, <<"bridged">>),
-            lager:debug("transferor and transferee bridged"),
-            {'stop', 'normal', State};
+%        _Transferor1 ->
+%            ?WSD_EVT(_Transferor1, Transferee, <<"bridged">>),
+%            lager:debug("transferor and transferee bridged"),
+%            {'stop', 'normal', State};
         _CallId ->
             ?WSD_EVT(_CallId, Transferee, <<"bridged">>),
             lager:debug("transferee bridged to unknown callid ~s", [_CallId]),

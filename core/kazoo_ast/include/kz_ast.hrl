@@ -32,9 +32,12 @@
 -define(MATCH(Left, Right), {'match',_, Left, Right}).
 
 -define(EMPTY_LIST, {'nil',_}).
--define(LIST(Head, Tail)
-       ,{'cons', _Line, Head, Tail}
+-define(LIST_INNER(Head, Tail)
+       ,{'cons', _LineInner, Head, Tail}
        ).
+-define(LIST(Head, Tail)
+,{'cons', _Line, Head, Tail}
+).
 
 -define(LC(Expr, Qualifiers)
        ,{'lc', _, Expr, Qualifiers}

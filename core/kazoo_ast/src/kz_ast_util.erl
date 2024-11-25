@@ -97,7 +97,7 @@ ast_to_list_of_binaries(?MOD_FUN_ARGS('kapi_dialplan', 'optional_bridge_req_endp
     ?OPTIONAL_BRIDGE_REQ_ENDPOINT_HEADERS ++ Binaries;
 ast_to_list_of_binaries(?MOD_FUN_ARGS('kapi_call', 'optional_call_event_headers', []), Binaries) ->
     ?OPTIONAL_CALL_EVENT_HEADERS ++ Binaries;
-ast_to_list_of_binaries(?LIST(?LIST(_, _)=H, T), Binaries) ->
+ast_to_list_of_binaries(?LIST(?LIST_INNER(_, _)=H, T), Binaries) ->
     ast_to_list_of_binaries(T, [ast_to_list_of_binaries(H) | Binaries]);
 ast_to_list_of_binaries(?LIST(H, T), Binaries) ->
     ast_to_list_of_binaries(T, [binary_match_to_binary(H) | Binaries]);
