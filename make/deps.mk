@@ -67,7 +67,9 @@ dep_eflame = git https://github.com/proger/eflame 34d0c19dee808d614d75d91c143386
 dep_eiconv = git https://github.com/zotonic/eiconv
 # dep_escalus = git https://github.com/esl/escalus 0de0463c345a1ade6fccfb9aadad719b58a1cef5
 # dep_exml = git https://github.com/paulgray/exml 2.2.1
-dep_jiffy = git https://github.com/lazedo/jiffy utf8  ## utf8 decode
+#dep_jiffy = git https://github.com/lazedo/jiffy utf8  ## utf8 decoed
+dep_jiffy = git https://github.com/davisp/jiffy 1.1.2
+
 dep_meck = git https://github.com/eproxus/meck
 dep_nklib = git https://github.com/NetComposer/nklib a476c4aee9085f667cb1a91eb3db07319917d28a # SHA before Timezone changes to nklib
 dep_plists = git https://github.com/vonix-networks/plists 1.0.1-vonix
@@ -85,10 +87,14 @@ dep_couchbeam = git https://github.com/vonix-networks/erlang-couchbeam 1.5.0-von
 ### https://github.com/benoitc/couchbeam/pull/166
 ### https://github.com/benoitc/couchbeam/pull/174
 
-dep_jesse = git https://github.com/2600hz/jesse 1.5-rc13
+#dep_jesse = git https://github.com/2600hz/jesse 1.5-rc13
 ##dep_jesse = git https://github.com/for-GET/jesse 1.5.0-rc2
+dep_jesse = git https://github.com/for-GET/jesse 1.8.1
+#
+#dep_lager = git https://github.com/erlang-lager/lager 3.5.2
+#dep_lager = git https://github.com/erlang-lager/lager master
+dep_lager = git https://github.com/erlang-lager/lager 3.9.2
 
-dep_lager = git https://github.com/erlang-lager/lager 3.5.2
 # dep_trie = git https://github.com/okeuday/trie v1.5.4
 dep_fs_event = git https://github.com/jamhed/fs_event 783400da08c2b55c295dbec81df0d926960c0346
 dep_fs_sync = git https://github.com/jamhed/fs_sync 2cf85cf5861221128f020c453604d509fd37cd53

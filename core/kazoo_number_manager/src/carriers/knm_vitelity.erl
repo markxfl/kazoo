@@ -221,7 +221,7 @@ query_vitelity(Prefix, Quantity, QOptions) ->
     URI = knm_vitelity_util:build_uri(QOptions),
     {'ok'
     ,{'http', [], _Host, _Port, _Path, [$? | QueryString]}
-    } = http_uri:parse(kz_term:to_list(URI)),
+    } = uri_string:parse(kz_term:to_list(URI)),
     Options = cow_qs:parse_qs(kz_term:to_binary(QueryString)),
     XML =
         case props:get_value(<<"cmd">>, Options) of
